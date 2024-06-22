@@ -142,6 +142,7 @@
     <ClInclude Include="container\thread_safe_stack.h" />
     <ClInclude Include="test\global.h" />
     <ClInclude Include="test\test_algorithm.h" />
+    <ClInclude Include="test\test_any.h" />
     <ClInclude Include="test\test_asynclog.h" />
     <ClInclude Include="test\test_interupthread.h" />
     <ClInclude Include="test\test_lockfreequeue.h" />
@@ -156,6 +157,7 @@
     <ClInclude Include="thread\internal_thread.h" />
     <ClInclude Include="thread\join_threads.h" />
     <ClInclude Include="thread\thread_pool.h" />
+    <ClInclude Include="tool\Any.h" />
     <ClInclude Include="tool\async_log.h" />
     <ClInclude Include="tool\Singleton.h" />
     <ClInclude Include="tool\SingletonMemory.h" />

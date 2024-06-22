@@ -14,6 +14,7 @@
 #include "test/test_quicksort.h"
 #include "test/test_lockfreestack.h"
 #include "test/test_asynclog.h"
+#include "test/test_any.h"
 
 int main()
 {
@@ -51,6 +52,8 @@ int main()
 
     // TestHazardPointer();
 
-    TestAsyncLog();
+    // TestAsyncLog();
+
+    // test_any();
     return 0;
 }
