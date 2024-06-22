@@ -134,6 +134,7 @@
     <ClInclude Include="algorithm\parallel_algorithm.h" />
     <ClInclude Include="algorithm\quick_sort.h" />
     <ClInclude Include="container\lock_free_queue.h" />
+    <ClInclude Include="container\lock_free_stack.h" />
     <ClInclude Include="container\thread_safe_hash.h" />
     <ClInclude Include="container\thread_safe_list.h" />
     <ClInclude Include="container\thread_safe_queue.h" />
@@ -142,6 +143,7 @@
     <ClInclude Include="test\test_algorithm.h" />
     <ClInclude Include="test\test_interupthread.h" />
     <ClInclude Include="test\test_lockfreequeue.h" />
+    <ClInclude Include="test\test_lockfreestack.h" />
     <ClInclude Include="test\test_quicksort.h" />
     <ClInclude Include="test\test_singletonmemory.h" />
     <ClInclude Include="test\test_threadpool.h" />

@@ -12,6 +12,7 @@
 #include "test/test_threadsafelist.h"
 #include "test/test_singletonmemory.h"
 #include "test/test_quicksort.h"
+#include "test/test_lockfreestack.h"
 
 int main()
 {
@@ -44,5 +45,9 @@ int main()
     // test_sequential_quick();
     // test_parallel_quick_sort();
     // test_thread_pool_sort();
+
+    // TestLockFreeStack();
+
+    // TestHazardPointer();
     return 0;
 }
