@@ -132,9 +132,11 @@
   <ItemGroup>
     <ClInclude Include="algorithm\parallel_algorithm.h" />
     <ClInclude Include="test\test_algorithm.h" />
+    <ClInclude Include="test\test_interupthread.h" />
     <ClInclude Include="test\test_threadpool.h" />
+    <ClInclude Include="thread\internal_thread.h" />
     <ClInclude Include="thread\join_threads.h" />
-    <ClInclude Include="thread\threadpool.h" />
+    <ClInclude Include="thread\thread_pool.h" />
     <ClInclude Include="tool\Singleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
