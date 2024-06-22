@@ -2,9 +2,14 @@
 //
 
 #include <iostream>
+#include "test/test_algorithm.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    TestParallelForEach();
+    auto nevc = TestAsyncForEach();
+    TestParallelFind(nevc);
+    AsyncParallelFind(nevc);
+    TestParallelPartialSum();
     return 0;
 }
