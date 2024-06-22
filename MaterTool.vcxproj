@@ -132,15 +132,28 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm\parallel_algorithm.h" />
+    <ClInclude Include="algorithm\quick_sort.h" />
     <ClInclude Include="container\lock_free_queue.h" />
+    <ClInclude Include="container\thread_safe_hash.h" />
+    <ClInclude Include="container\thread_safe_list.h" />
+    <ClInclude Include="container\thread_safe_queue.h" />
+    <ClInclude Include="container\thread_safe_stack.h" />
+    <ClInclude Include="test\global.h" />
     <ClInclude Include="test\test_algorithm.h" />
     <ClInclude Include="test\test_interupthread.h" />
     <ClInclude Include="test\test_lockfreequeue.h" />
+    <ClInclude Include="test\test_quicksort.h" />
+    <ClInclude Include="test\test_singletonmemory.h" />
     <ClInclude Include="test\test_threadpool.h" />
+    <ClInclude Include="test\test_threadsafehash.h" />
+    <ClInclude Include="test\test_threadsafelist.h" />
+    <ClInclude Include="test\test_threadsafequeue.h" />
+    <ClInclude Include="test\test_threadsafestack.h" />
     <ClInclude Include="thread\internal_thread.h" />
     <ClInclude Include="thread\join_threads.h" />
     <ClInclude Include="thread\thread_pool.h" />
     <ClInclude Include="tool\Singleton.h" />
+    <ClInclude Include="tool\SingletonMemory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
