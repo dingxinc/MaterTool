@@ -13,6 +13,7 @@
 #include "test/test_singletonmemory.h"
 #include "test/test_quicksort.h"
 #include "test/test_lockfreestack.h"
+#include "test/test_asynclog.h"
 
 int main()
 {
@@ -49,5 +50,7 @@ int main()
     // TestLockFreeStack();
 
     // TestHazardPointer();
+
+    TestAsyncLog();
     return 0;
 }
