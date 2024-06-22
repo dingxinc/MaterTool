@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="thread\internal_thread.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm\parallel_algorithm.h" />

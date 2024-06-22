@@ -7,6 +7,8 @@
 #include <string>
 #include <future>
 
+extern void interruption_point();
+
 class thread_interrupted : public std::exception
 {
 public:
@@ -103,19 +105,11 @@ public:
     }
 };
 
-thread_local interrupt_flag this_thread_interrupt_flag;
-void interruption_point() {
-    if (this_thread_interrupt_flag.is_set())
-    {
-        throw thread_interrupted();
-    }
-}
+extern thread_local interrupt_flag this_thread_interrupt_flag;
 
 // 这个类主要是用来在析构时释放和flag关联的条件变量
 struct clear_cv_on_destruct {
-    ~clear_cv_on_destruct() {
-        this_thread_interrupt_flag.clear_condition_variable();
-    }
+    ~clear_cv_on_destruct();
 };
 
 class interruptible_thread
@@ -153,16 +147,8 @@ public:
 };
 
 // 支持普通条件变量的等待
-void interruptible_wait(std::condition_variable& cv,
-    std::unique_lock<std::mutex>& lk) 
-{
-    interruption_point();
-    this_thread_interrupt_flag.set_condition_variable(cv);
-    clear_cv_on_destruct guard;
-    interruption_point();
-    cv.wait_for(lk, std::chrono::milliseconds(1));
-    interruption_point();
-}
+extern void interruptible_wait(std::condition_variable& cv,
+    std::unique_lock<std::mutex>& lk);
 
 // 支持谓词的等待
 template<typename Predicate>
@@ -196,4 +182,4 @@ void interruptible_wait(std::future<T>& uf)
             break;
     }
     interruption_point();
-};
+}
