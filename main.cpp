@@ -5,6 +5,7 @@
 #include "test/test_algorithm.h"
 #include "test/test_threadpool.h"
 #include "test/test_interupthread.h"
+#include "test/test_lockfreequeue.h"
 
 int main()
 {
@@ -24,5 +25,7 @@ int main()
     for (unsigned i = 0; i < background_threads.size(); i++) {
         background_threads[i].join();
     }*/
+
+    TestLockFreeQueMultiPushPop2();
     return 0;
 }

@@ -132,8 +132,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm\parallel_algorithm.h" />
+    <ClInclude Include="container\lock_free_queue.h" />
     <ClInclude Include="test\test_algorithm.h" />
     <ClInclude Include="test\test_interupthread.h" />
+    <ClInclude Include="test\test_lockfreequeue.h" />
     <ClInclude Include="test\test_threadpool.h" />
     <ClInclude Include="thread\internal_thread.h" />
     <ClInclude Include="thread\join_threads.h" />
