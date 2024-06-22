@@ -3,13 +3,16 @@
 
 #include <iostream>
 #include "test/test_algorithm.h"
+#include "test/test_threadpool.h"
 
 int main()
 {
-    TestParallelForEach();
+    /*TestParallelForEach();
     auto nevc = TestAsyncForEach();
     TestParallelFind(nevc);
     AsyncParallelFind(nevc);
-    TestParallelPartialSum();
+    TestParallelPartialSum();*/
+
+    test_thread_pool();
     return 0;
 }
